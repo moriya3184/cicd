@@ -10,9 +10,9 @@ RUN dotnet restore
 
 COPY . .
 
-RUN dotnet test --verbosity=normal --results-directory /TestResults/ --logger "trx;LogFileName=test_results.xml" ./Tests/Tests.csproj
+#RUN dotnet test --verbosity=normal --results-directory /TestResults/ --logger "trx;LogFileName=test_results.xml" ./Tests/Tests.csproj
 
-RUN dotnet publish ./AccountOwnerServer/AccountOwnerServer.csproj -o /publish/
+#RUN dotnet publish ./AccountOwnerServer/AccountOwnerServer.csproj -o /publish/
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0
 
